@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <title>Library</title>
+</head>
+
+<body>
+
+    <main class="main-container">
+        <header>
+            <h1>The Book Library</h1>
+            <p>Design By Mb Freed</p>
+            <button id="new">New Book</button>
+        </header>
+        <dialog id="my-dialog">
+            <form>
+                <fieldset>
+                    <legend>NEW BOOK</legend>
+
+                    <label for="title">Title
+                        <input type="text" name="title" id="title" minlength="2" required>
+                    </label>
+
+                    <label for="author">Author
+                        <input type="text" name="author" id="author" minlength="2" required>
+                    </label>
+
+                    <label for="pages">Pages
+                        <input type="number" name="pages" min="1" id="pages" required>
+                    </label>
+
+                    <label for="read">
+                        <input type="checkbox" name="read" id="read"> I have read
+                    </label>
+
+                    <button type="submit" formmethod="dialog">Add</button>
+                </fieldset>
+            </form>
+        </dialog>
+        <div class="container"></div>
+    </main>
+</body>
+
+</html>
