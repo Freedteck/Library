@@ -6,23 +6,47 @@
 
 body,
 html {
-    padding: 0 20px;
     height: 100%;
-}
-
-.main-container {
-    display: grid;
-    height: 100%;
-    grid-template-rows: 1fr 5fr;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {
-    grid-row: 1;
     border: 2px solid black;
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-form {
+header input {
+    flex: .7;
+    padding: 10px;
+    outline: none;
+    border: 1px solid rgb(211, 210, 210);
+    border-radius: 15px;
+    background-color: aliceblue;
+}
+
+#my-dialog {
+    margin: auto;
+    border-radius: 20px;
+    border: none;
+    align-self: flex-start;
     padding: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+#close {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: blueviolet;
+    align-self: flex-end;
+    padding: 0 5px;
+    border-radius: 10px;
 }
 
 fieldset {
@@ -30,10 +54,16 @@ fieldset {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    align-content: flex-end;
+    border: 1px solid black;
+    border-radius: 20px;
 }
 
-input {
+fieldset legend {
+    text-align: center;
+    font-weight: 500;
+}
+
+form input {
     width: 100%;
     padding: 10px;
     outline: none;
@@ -50,31 +80,42 @@ button {
     color: white;
 }
 
+#close:hover, button:hover {
+    cursor: pointer;
+    background-color: rgba(136, 53, 214, 0.5);
+    border: 1px solid blueviolet;
+}
 .container {
     display: grid;
-    border: 2px solid black;
     gap: 10px;
     padding: 20px;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-template-rows: .5fr;
 }
 
-.container div {
+.container .card {
     border-radius: 20px;
-    border: 2px solid black;
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 3px gray;
+    text-transform: uppercase;
+}
+
+.card p {
+    color: #4b5563;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.card div {
+    display: flex;
+    justify-content: space-between;
 }
 
 input:invalid:focus {
     border: 1px solid red;
-}
-
-#my-dialog {
-    margin: auto;
 }
 
 label[for="read"] {
@@ -86,4 +127,8 @@ label[for="read"] {
 input[type="checkbox"] {
     width: fit-content;
     height: 100%;
+}
+
+img {
+    filter: hue-rotate(0deg);
 }
